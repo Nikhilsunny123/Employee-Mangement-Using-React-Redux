@@ -22,7 +22,7 @@ function Employee({selectEmp,editPage}) {
 
   useEffect(()=>{
 
-        selectEmp.value
+    selectEmployee();
   },[])
   
 
