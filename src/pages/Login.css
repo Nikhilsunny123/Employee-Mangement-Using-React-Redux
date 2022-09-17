@@ -1,0 +1,51 @@
+.form {
+    border: 3px solid #0b190b;
+    max-width: 500px;
+    margin: auto;
+    padding: 2%;
+    margin-top: 7%;
+   
+   
+    background-color: rgb(181, 245, 245);
+  }
+  .form span{
+    color: #2d7c5f;
+    
+    font-size: 2rem;
+    font-weight: 600;
+    
+    
+    
+  }
+  .error{
+    color: red;
+  }
+  
+ 
+  input[type=email], input[type=password] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(122, 120, 120);
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #184031;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  

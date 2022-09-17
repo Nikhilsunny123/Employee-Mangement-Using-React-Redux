@@ -1,0 +1,43 @@
+.body
+{
+    /* max-width: 1080px;  */
+
+    margin: 0px;
+    padding: 0px;
+    flex:1;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+	
+
+}
+button:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    
+}
+a:hover{
+    color: #0E0E2C;
+}
+.container
+{
+   
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding-left: 6%;
+    padding-right: 6%;
+    box-sizing: border-box;
+  
+  
+   
+}
+
+
+ul {
+	list-style: none;
+}

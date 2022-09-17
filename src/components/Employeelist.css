@@ -1,0 +1,30 @@
+.mainEmployeeComponent{
+    width: 95%;
+    margin-top: 2%;
+}
+
+.employeelist{
+    width: 40%;
+    margin-left: 15%;
+    
+}
+.employee{
+    width: 50%;
+}
+.components{
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.button{
+    position: relative;
+    left: 90%;
+    width: auto;
+
+}
+.cards{
+    margin: 4%;
+    
+}
