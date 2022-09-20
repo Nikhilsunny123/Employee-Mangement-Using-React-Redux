@@ -9,7 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 import "./UpdateEmployee.css"
 
 
-function UpdateEmployee({updateEmployees,editPage}) {
+function UpdateEmployee({updateEmployees}) {
 
     const dispatch = useDispatch();
 
@@ -29,6 +29,8 @@ function UpdateEmployee({updateEmployees,editPage}) {
         updateEmployee({ id: updateEmployees.id,employeeName: newEmployeeName,
           employeeEmail: newEmployeeEmail,employeeDOB: newEmployeeDOB,employeeImage:newEmployeeImage})
       );
+      dispatch(selectEmployee({ id: updateEmployees.id,employeeName: newEmployeeName,
+        employeeEmail: newEmployeeEmail,employeeDOB: newEmployeeDOB,employeeImage:newEmployeeImage}));
                      
         dispatch(editForm({ edit:false}));
      

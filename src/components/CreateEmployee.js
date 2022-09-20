@@ -2,11 +2,21 @@ import React,{useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../features/Employee';
 import { connect } from 'react-redux';
+import {useNavigate}  from 'react-router-dom';
+
+
+import './CreateEmployee.css'
+
 
 
 function CreateEmployee() {
   const dispatch = useDispatch();
+  const navigate=useNavigate();
   //  const employeeList = useSelector((state) => state.employees.value);
+  const navigateToEmployeeList = () => {
+    // 👇️ navigate to /empoyeeList
+    navigate('/employeeList');
+  };
 
   const[employeeName,setEmployeeName]=useState("");
   const [employeeEmail, setEmployeeEmail] = useState("");
@@ -55,7 +65,7 @@ function CreateEmployee() {
                 employeeImage,
               })
               );
-           
+              navigateToEmployeeList();
             e.preventDefault();
           }} >
             Add

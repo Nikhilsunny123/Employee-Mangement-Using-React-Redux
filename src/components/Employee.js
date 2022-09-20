@@ -2,10 +2,10 @@ import React from 'react'
 import { useState } from 'react';
 import { connect } from 'react-redux';
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
-import {deleteEmployee} from '../features/Employee';
+import {deleteEmployee, updateEmployee} from '../features/Employee';
 import { editForm } from '../features/Employee';
 import { selectEmployee } from '../features/Employee';
 
@@ -13,21 +13,20 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+
 import Modal from 'react-bootstrap/Modal';
 import UpdateEmployee from './UpdateEmployee';
-import { useEffect } from 'react';
+
 
 
 function Employee({selectEmp,editPage}) {
 
-  useEffect(()=>{
-
-    selectEmployee();
-  },[])
-  
-
-
   const dispatch = useDispatch();
+
+
+
+
+
   // const selectEmployee = useSelector((state) => state.employees.selectedEmployee);
 
 
@@ -39,7 +38,8 @@ function Employee({selectEmp,editPage}) {
 
   const deleteEmp=()=>{
     dispatch(deleteEmployee({ id: selectEmp.id }));
-      dispatch(selectEmployee(null))
+      dispatch(selectEmployee(null));
+      handleClose();
   }
 
   return (
@@ -119,6 +119,7 @@ const mapStateToProps=(state)=>{
   return {
     selectEmp:state.employees.selectedEmployee,
     editPage:state.employees.edit,
+    employeeList:state.employees.value
   }
 }
 

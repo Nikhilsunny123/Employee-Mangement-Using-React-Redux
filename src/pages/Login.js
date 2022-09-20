@@ -10,6 +10,10 @@ import { loginAction } from "../features/Login";
 
 function Login() {
   const navigate=useNavigate();
+  const navigateToEmployeeList = () => {
+    // 👇️ navigate to /empoyeeList
+    navigate('/employeeList');
+  };
 
   const validation = Yup.object().shape({
     email: Yup.string()
@@ -40,9 +44,9 @@ function Login() {
               };
              
                dispatch(loginAction(submit));
-               
+               navigateToEmployeeList();
              
-               navigate.push("/");
+               
               }
             }
         >

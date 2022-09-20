@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { Provider } from 'react-redux';
-import {applyMiddleware, compose } from 'redux';
+import { compose } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import employeeReducer from "./features/Employee";
 import loginReducer from "./features/Login";
 
-// import reducers from './reducers';
-import thunk from'redux-thunk';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
